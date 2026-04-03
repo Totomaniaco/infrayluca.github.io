@@ -154,7 +154,6 @@ nav a:hover {
     font-size: 2rem;
     margin-bottom: 10px;
     background: linear-gradient(135deg, #0a2f6c, #b68b2c);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     text-transform: uppercase;
@@ -203,22 +202,7 @@ footer::after {
     opacity: 0.6;
 }
 
-/* ===== ADAPTACIÓN MÓVIL ===== */
-@media (max-width: 800px) {
-    h1 {
-        font-size: 2rem;
-    }
 
-    nav a {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-    }
-
-    .carousel {
-        height: 300px;
-    }
-}
 
    /* Estilos adicionales para la sección de artesanos */
         .artesanos {
@@ -279,8 +263,25 @@ footer::after {
             font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .artesanos-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* ===== ADAPTACIÓN MÓVIL ===== */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .carousel {
+        height: 300px;
+        
+    }
+     .artesanos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
-        }
+}
+
+        
