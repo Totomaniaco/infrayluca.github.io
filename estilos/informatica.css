@@ -61,11 +61,11 @@ nav a:hover {
     box-shadow: 0 0 30px #f5b81b, 0 0 0 3px white;
 }
 
-/* ===== CARRUSEL ALUCINANTE ===== */
+/* ===== CARRUSEL ===== */
 .carousel {
-    width: 90%;
+    width: 80%;
     max-width: 1300px;
-    height: 500px;
+    height: 400px;
     margin: 40px auto;
     overflow: hidden;
     position: relative;
@@ -74,6 +74,94 @@ nav a:hover {
     border: 3px dashed #ffffffb3;
 }
 
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+/* ===== SECCIÓN DE CONTENIDO (TEMAS) ===== */
+.contenido {
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contenido h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0a2f6c;
+    text-shadow: 2px 2px 0 #c9a03d30;
+    letter-spacing: 2px;
+}
+
+.temas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Tarjetas de cada tema (azul y oro) */
+.tema-card {
+    background: linear-gradient(145deg, #ffffff, #ebf3ff);
+    padding: 30px 25px;
+    width: 280px;
+    text-align: center;
+    border-radius: 50px 20px 50px 20px;
+    box-shadow: 15px 15px 30px rgba(0, 20, 60, 0.2), -5px -5px 15px #ffffff, 0 0 0 3px #c9a03d inset;
+    transition: 0.4s ease;
+    border: 2px solid #0a2f6c;
+    position: relative;
+    overflow: hidden;
+      text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.tema-card:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 0 0 5px #c9a03d, 0 20px 30px #0a1f4470;
+    background: linear-gradient(145deg, #fcf3d7, #ffffff);
+    border-color: #c9a03d;
+    transform: scale(1.08) rotate(1deg);
+}
+
+/* Iconos de las tarjetas */
+.icono {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    filter: drop-shadow(0 5px 5px #c9a03d);
+}
+
+.tema-card h3 {
+    background: linear-gradient(135deg, #0a2f6c, #b68b2c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0a2f6c; /* Color de respaldo si no funciona el degradado */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.tema-card p {
+    font-size: 1rem;
+    color: #1e3a8a;
+    font-weight: 500;
+}
 
 /* ===== FOOTER DORADO ===== */
 footer {
@@ -89,6 +177,7 @@ footer {
     letter-spacing: 3px;
     font-weight: bold;
     position: relative;
+    margin-top: 60px;
 }
 
 footer p {
@@ -104,7 +193,7 @@ footer::after {
     opacity: 0.6;
 }
 
-        /* ===== ADAPTACIÓN MÓVIL ===== */
+/* ===== ADAPTACIÓN MÓVIL ===== */
 @media (max-width: 800px) {
     h1 {
         font-size: 2rem;
@@ -115,30 +204,21 @@ footer::after {
         margin: 10px auto;
         width: 80%;
     }
-  
-}
 
-/* Imagenes */
-.carousel{
-    width:80%;
-    height:400px;
-    margin:30px auto;
-    overflow:hidden;
-    position:relative;
-}
+    .carousel {
+        width: 95%;
+        height: 250px;
+    }
 
-.carousel img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    position:absolute;
-    opacity:0;
-    transition:1s;
-}
+    .contenido h2 {
+        font-size: 1.8rem;
+    }
 
-.carousel img.active{
-    opacity:1;
-}
-h1{
-    text-align: center;
+    .tema-card {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
 }

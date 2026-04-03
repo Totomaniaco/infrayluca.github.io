@@ -195,7 +195,7 @@ footer p {
 }
 
 footer::after {
-    content: "⚜️⚜️⚜️";
+    content: "⚜️⚜️⚜️⚜️⚜️⚜️";
     font-size: 2rem;
     letter-spacing: 15px;
     display: block;
