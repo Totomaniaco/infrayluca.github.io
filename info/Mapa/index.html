@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morelos Mapa Interactivo</title>
+  <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Municipios de Morelos</h1>
+      <p>Haz clic en un municipio para ver informacion sobre el</p>
+    </div>
+    <div class="score-badge">
+      <div class="num" id="score">0</div>
+      <div class="lbl">explorados</div>
+    </div>
+  </header>
+
+  <div class="main">
+    <div id="map-container">
+      <svg id="mapa-svg"></svg>
+    </div>
+    <div class="sidebar">
+      <div class="info-panel empty" id="info-panel">
+        <div class="icono">🗺️</div>
+        <p>Selecciona un municipio en el mapa para ver su información</p>
+      </div>
+      <div class="visitados-section">
+        <div class="visitados-titulo">Municipios explorados</div>
+        <div class="visitados-lista" id="visitados-lista">
+          <span class="vacio-msg">Vacio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+  <script src="mapa.js"></script>
+
+</body>
+</html>
