@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interactivo de Morelos</title>
+  <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div>
+      <h1>🌎 Municipios de Morelos</h1>
+      <p>Explora o juega a encontrar municipios</p>
+    </div>
+
+    <div class="score-badge">
+      <div class="num" id="score">0</div>
+      <div class="lbl">puntos</div>
+    </div>
+  </header>
+
+  <!-- 🎮 PANEL DE JUEGO -->
+  <div class="game-panel">
+    <p id="reto">Cargando reto...</p>
+    <button onclick="nuevoReto()">Nuevo reto</button>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main">
+
+    <!-- MAPA -->
+    <div id="map-container">
+      <svg id="mapa-svg"></svg>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- INFO -->
+      <div class="info-panel empty" id="info-panel">
+        <div class="icono">🗺️</div>
+        <p>Selecciona un municipio o juega un reto</p>
+      </div>
+
+      <!-- LISTA -->
+      <div class="visitados-section">
+        <div class="visitados-titulo">Municipios explorados</div>
+        <div class="visitados-lista" id="visitados-lista">
+          <span class="vacio-msg">Vacío</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOOLTIP -->
+  <div id="tooltip"></div>
+
+  <!-- LIBRERÍA -->
+  <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+
+  <!-- TU SCRIPT -->
+  <script src="mapa.js"></script>
+
+</body>
+</html>
