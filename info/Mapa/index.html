@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interactivo Morelos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Municipios de Morelos</h1>
+    <p>Juego interactivo</p>
+  </div>
+
+  <div>
+    <button onclick="reiniciarJuego()" class="btn">🔄 Nuevo reto</button>
+  </div>
+</header>
+
+<div id="reto" style="padding:10px; font-weight:bold; text-align:center;">
+  Cargando...
+</div>
+
+<div class="main">
+  <div id="map-container">
+    <svg id="mapa-svg"></svg>
+  </div>
+
+  <div class="sidebar">
+    <div id="info-panel"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/d3@7"></script>
+<script src="mapa.js"></script>
+
+</body>
+</html>

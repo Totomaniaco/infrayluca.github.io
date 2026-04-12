@@ -1,0 +1,58 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background: #ffeb3b;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reto-box {
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  height: 90vh;
+}
+
+#map-container {
+  flex: 1;
+}
+
+#mapa-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.municipio {
+  fill: #81c784;
+  stroke: #2e7d32;
+  cursor: pointer;
+}
+
+.municipio.correcto {
+  fill: red !important;
+}
+
+.muni-label {
+  font-size: 9px;
+  fill: #000;
+  text-anchor: middle;
+  pointer-events: none;
+}
